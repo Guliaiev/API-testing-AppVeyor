@@ -21,6 +21,7 @@ class MobileBankApiTestV2 {
           // .header("Content-Type", "application/json; charset=UTF-8")
           // специализированные проверки - лучше
           .contentType(ContentType.JSON)
+              .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
       ;
     }
 }
